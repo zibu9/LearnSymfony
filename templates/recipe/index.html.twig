@@ -8,9 +8,11 @@
     pariatur. Consectetur dolore sint deserunt nisi ullamco ipsum do ad.
 
     <ul>
+    {% for recipe in recipes %}
         <li class="nav-item">
-            <a href="{{ url('recipe.show', {id: 32, slug: 'pate-bolognaise' }) }}">Pate bolognaise</a>
+            <a href="{{ url('recipe.show', {id: recipe.id, slug: recipe.slug }) }}">{{ recipe.title }}</a>
         </li>
+    {% endfor %}
     </ul>
 
 {% endblock %}
